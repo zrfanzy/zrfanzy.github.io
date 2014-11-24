@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="Shortcut Icon" href="ico.bmp">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>rock sky☆★☆摇滚天空</title>
+<style type="text/css">
+<!--
+body {
+	background-color: #000000;
+}
+#Layer1 {
+	position:absolute;
+	left:105px;
+	top:6px;
+	width:247px;
+	height:336px;
+	z-index:2;
+}
+#Layer2 {
+	position:absolute;
+	left:667px;
+	top:10px;
+	width:261px;
+	height:528px;
+	z-index:3;
+}
+#Layer3 {
+	position:absolute;
+	left:421px;
+	top:270px;
+	width:253px;
+	height:231px;
+	z-index:1;
+}
+#Layer4 {
+	position:absolute;
+	left:424px;
+	top:43px;
+	width:255px;
+	height:228px;
+	z-index:4;
+}
+.STYLE1 {
+	font-size: 18px;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+a:link {
+	color: #FFFFFF;
+}
+a:visited {
+	color: #FFFFFF;
+}
+a:active {
+	color: #FFCC00;
+}
+-->
+</style><script type="text/JavaScript">
+<!--
+function MM_timelinePlay(tmLnName, myID) { //v1.2
+  //Copyright 1998, 1999, 2000, 2001, 2002, 2003, 2004 Macromedia, Inc. All rights reserved.
+  var i,j,tmLn,props,keyFrm,sprite,numKeyFr,firstKeyFr,propNum,theObj,firstTime=false;
+  if (document.MM_Time == null) MM_initTimelines(); //if *very* 1st time
+  tmLn = document.MM_Time[tmLnName];
+  if (myID == null) { myID = ++tmLn.ID; firstTime=true;}//if new call, incr ID
+  if (myID == tmLn.ID) { //if Im newest
+    setTimeout('MM_timelinePlay("'+tmLnName+'",'+myID+')',tmLn.delay);
+    fNew = ++tmLn.curFrame;
+    for (i=0; i<tmLn.length; i++) {
+      sprite = tmLn[i];
+      if (sprite.charAt(0) == 's') {
+        if (sprite.obj) {
+          numKeyFr = sprite.keyFrames.length; firstKeyFr = sprite.keyFrames[0];
+          if (fNew >= firstKeyFr && fNew <= sprite.keyFrames[numKeyFr-1]) {//in range
+            keyFrm=1;
+            for (j=0; j<sprite.values.length; j++) {
+              props = sprite.values[j]; 
+              if (numKeyFr != props.length) {
+                if (props.prop2 == null) sprite.obj[props.prop] = props[fNew-firstKeyFr];
+                else        sprite.obj[props.prop2][props.prop] = props[fNew-firstKeyFr];
+              } else {
+                while (keyFrm<numKeyFr && fNew>=sprite.keyFrames[keyFrm]) keyFrm++;
+                if (firstTime || fNew==sprite.keyFrames[keyFrm-1]) {
+                  if (props.prop2 == null) sprite.obj[props.prop] = props[keyFrm-1];
+                  else        sprite.obj[props.prop2][props.prop] = props[keyFrm-1];
+        } } } } }
+      } else if (sprite.charAt(0)=='b' && fNew == sprite.frame) eval(sprite.value);
+      if (fNew > tmLn.lastFrame) tmLn.ID = 0;
+  } }
+}
+
+function MM_timelineGoto(tmLnName, fNew, numGotos) { //v2.0
+  //Copyright 1998, 1999, 2000, 2001, 2002, 2003, 2004 Macromedia, Inc. All rights reserved.
+  var i,j,tmLn,props,keyFrm,sprite,numKeyFr,firstKeyFr,lastKeyFr,propNum,theObj;
+  if (document.MM_Time == null) MM_initTimelines(); //if *very* 1st time
+  tmLn = document.MM_Time[tmLnName];
+  if (numGotos != null)
+    if (tmLn.gotoCount == null) tmLn.gotoCount = 1;
+    else if (tmLn.gotoCount++ >= numGotos) {tmLn.gotoCount=0; return}
+  jmpFwd = (fNew > tmLn.curFrame);
+  for (i = 0; i < tmLn.length; i++) {
+    sprite = (jmpFwd)? tmLn[i] : tmLn[(tmLn.length-1)-i]; //count bkwds if jumping back
+    if (sprite.charAt(0) == "s") {
+      numKeyFr = sprite.keyFrames.length;
+      firstKeyFr = sprite.keyFrames[0];
+      lastKeyFr = sprite.keyFrames[numKeyFr - 1];
+      if ((jmpFwd && fNew<firstKeyFr) || (!jmpFwd && lastKeyFr<fNew)) continue; //skip if untouchd
+      for (keyFrm=1; keyFrm<numKeyFr && fNew>=sprite.keyFrames[keyFrm]; keyFrm++);
+      for (j=0; j<sprite.values.length; j++) {
+        props = sprite.values[j];
+        if (numKeyFr == props.length) propNum = keyFrm-1 //keyframes only
+        else propNum = Math.min(Math.max(0,fNew-firstKeyFr),props.length-1); //or keep in legal range
+        if (sprite.obj != null) {
+          if (props.prop2 == null) sprite.obj[props.prop] = props[propNum];
+          else        sprite.obj[props.prop2][props.prop] = props[propNum];
+      } }
+    } else if (sprite.charAt(0)=='b' && fNew == sprite.frame) eval(sprite.value);
+  }
+  tmLn.curFrame = fNew;
+  if (tmLn.ID == 0) eval('MM_timelinePlay(tmLnName)');
+}
+
+function MM_initTimelines() { //v4.0
+    //MM_initTimelines() Copyright 1997 Macromedia, Inc. All rights reserved.
+    var ns = navigator.appName == "Netscape";
+    var ns4 = (ns && parseInt(navigator.appVersion) == 4);
+    var ns5 = (ns && parseInt(navigator.appVersion) > 4);
+    var macIE5 = (navigator.platform ? (navigator.platform == "MacPPC") : false) && (navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4);
+    document.MM_Time = new Array(1);
+    document.MM_Time[0] = new Array(3);
+    document.MM_Time["Timeline1"] = document.MM_Time[0];
+    document.MM_Time[0].MM_Name = "Timeline1";
+    document.MM_Time[0].fps = 15;
+    document.MM_Time[0][0] = new String("sprite");
+    document.MM_Time[0][0].slot = 1;
+    if (ns4)
+        document.MM_Time[0][0].obj = document["Layer2"];
+    else if (ns5)
+        document.MM_Time[0][0].obj = document.getElementById("Layer2");
+    else
+        document.MM_Time[0][0].obj = document.all ? document.all["Layer2"] : null;
+    document.MM_Time[0][0].keyFrames = new Array(1, 9, 10, 11, 12, 13, 14, 15, 16, 20);
+    document.MM_Time[0][0].values = new Array(2);
+    if (ns5 || macIE5)
+        document.MM_Time[0][0].values[0] = new Array("678px", "678px", "678px", "678px", "678px", "678px", "678px", "678px", "678px", "673px", "667px", "700px", "678px", "669px", "678px", "678px", "678px", "678px", "678px", "678px");
+    else
+        document.MM_Time[0][0].values[0] = new Array(678,678,678,678,678,678,678,678,678,673,667,700,678,669,678,678,678,678,678,678);
+    document.MM_Time[0][0].values[0].prop = "left";
+    if (ns5 || macIE5)
+        document.MM_Time[0][0].values[1] = new Array("11px", "11px", "11px", "11px", "11px", "11px", "11px", "11px", "11px", "23px", "11px", "10px", "11px", "25px", "11px", "11px", "11px", "11px", "11px", "11px");
+    else
+        document.MM_Time[0][0].values[1] = new Array(11,11,11,11,11,11,11,11,11,23,11,10,11,25,11,11,11,11,11,11);
+    document.MM_Time[0][0].values[1].prop = "top";
+    if (!ns4) {
+        document.MM_Time[0][0].values[0].prop2 = "style";
+        document.MM_Time[0][0].values[1].prop2 = "style";
+    }
+    document.MM_Time[0][1] = new String("behavior");
+    document.MM_Time[0][1].frame = 16;
+    document.MM_Time[0][1].value = "MM_timelineGoto('Timeline1','1')";
+    document.MM_Time[0][2] = new String("sprite");
+    document.MM_Time[0][2].slot = 2;
+    if (ns4)
+        document.MM_Time[0][2].obj = document["Layer1"];
+    else if (ns5)
+        document.MM_Time[0][2].obj = document.getElementById("Layer1");
+    else
+        document.MM_Time[0][2].obj = document.all ? document.all["Layer1"] : null;
+    document.MM_Time[0][2].keyFrames = new Array(1, 9, 10, 11, 12, 13, 14, 15, 16, 20);
+    document.MM_Time[0][2].values = new Array(2);
+    if (ns5 || macIE5)
+        document.MM_Time[0][2].values[0] = new Array("86px", "86px", "86px", "86px", "86px", "86px", "86px", "86px", "86px", "86px", "99px", "73px", "92px", "77px", "89px", "86px", "86px", "86px", "86px", "86px");
+    else
+        document.MM_Time[0][2].values[0] = new Array(86,86,86,86,86,86,86,86,86,86,99,73,92,77,89,86,86,86,86,86);
+    document.MM_Time[0][2].values[0].prop = "left";
+    if (ns5 || macIE5)
+        document.MM_Time[0][2].values[1] = new Array("8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "18px", "15px", "15px", "26px", "11px", "18px", "8px", "8px", "8px", "8px", "8px");
+    else
+        document.MM_Time[0][2].values[1] = new Array(8,8,8,8,8,8,8,8,8,18,15,15,26,11,18,8,8,8,8,8);
+    document.MM_Time[0][2].values[1].prop = "top";
+    if (!ns4) {
+        document.MM_Time[0][2].values[0].prop2 = "style";
+        document.MM_Time[0][2].values[1].prop2 = "style";
+    }
+    document.MM_Time[0].lastFrame = 20;
+    for (i=0; i<document.MM_Time.length; i++) {
+        document.MM_Time[i].ID = null;
+        document.MM_Time[i].curFrame = 0;
+        document.MM_Time[i].delay = 1000/document.MM_Time[i].fps;
+    }
+}
+//-->
+</script></head>
+
+<body onload="MM_timelinePlay('Timeline1')">
+<div id="Layer1" style="left: 86px; top: 8px;"><img src="img/music.jpg" width="335" height="678" /></div>
+<div id="Layer2" style="left: 678px; top: 11px;"><img src="img/music.jpg" width="335" height="678" /></div>
+<div id="Layer3">
+  <p align="center" class="STYLE1"><a href="0.html">点击进入</a></p>
+  <p><a href="0.html"><img src="img/anniu.jpg" width="258" height="154" border="0" /></a></p>
+</div>
+<div id="Layer4">
+  <div align="center"><a href="0.html"><img src="img/top.png" width="220" height="189" border="0" /></a></div>
+</div>
+</body>
+</html>
