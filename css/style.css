@@ -212,6 +212,33 @@ img {
 #lightbox {
   display: none;
 }
+#research {
+  display: none;
+}
+#drama {
+  display: none;
+}
+#art {
+  display: none;
+}
+#social {
+  display: none;
+}
+#contest {
+  display: none;
+}
+#band {
+  display: none;
+}
+#thu1 {
+  display: none;
+}
+#thu2 {
+  display: none;
+}
+#epfl {
+  display: none;
+}
 #page {
   width: 100%;
   margin: 0 auto;
